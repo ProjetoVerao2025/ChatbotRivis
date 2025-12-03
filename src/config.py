@@ -1,0 +1,1 @@
+# como se fosse nosso .env, gerencia a url e horarios de envio por ex

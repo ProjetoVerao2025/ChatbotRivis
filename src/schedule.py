@@ -1,0 +1,1 @@
+# agendamento de mensagem atraves de bibliotecas como a prorpia schedule (chama web-scraper e whatsapp)

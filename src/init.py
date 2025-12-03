@@ -1,0 +1,1 @@
+# importa as funcoes principais para permitir que as coisas dentro da pasta src seja importadas facilmente

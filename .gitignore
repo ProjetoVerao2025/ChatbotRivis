@@ -1,0 +1,8 @@
+#gitignore model based on my extension project
+__pycache__/
+docker-compose.yml
+.venv/
+.idea/
+.env
+/
+#change dir name

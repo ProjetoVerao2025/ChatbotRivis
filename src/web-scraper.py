@@ -1,0 +1,1 @@
+# funcionalidade do bs4 + requests (vini + yanetti)
