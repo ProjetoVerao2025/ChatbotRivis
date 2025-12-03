@@ -26,7 +26,6 @@ dia = {} #O PROGRAMA ABAIXO JA IMPLEMENTA CORRETAMENTE O TRATAMENTO DO INPUT PAR
 
 #[0] = str com o nome da proteina 
 proteina = soup.find_all('div', class_ = "menu-item-name")
-#print(f"almoco = {proteina[0]} e jantar = {proteina[2]}")
 tmp = 0
 for p in proteina:
     if (tmp == 0):
@@ -35,34 +34,28 @@ for p in proteina:
         proteina_janta = f'{p.text.strip()}'
     tmp += 1
 
-#[0] = padroes ('arroz e feijao'), [1] = especial, [2] = salada, [3] = sobremesa (output especial), [4] = refresco, [5] e [6] = obs (tirar?)
+#[0] = padroes ('arroz e feijao'), [1] = especial, [2] = salada, [3] = sobremesa (output especial), [4] = refresco
 acompanhamentos = soup.find_all('div', class_ = "menu-item-description")
 aux = 0
 for list in acompanhamentos:
     if (aux == 1 or aux == 3):
         aux += 1
         continue
-    if (aux == 0):
-        prefix = 'l'
-    else: #aux == 2
-        prefix = 'd'
+    if (aux == 2):
         dia['dinner'] = proteina_janta
-    index = 0 #indice para controle do tipo de acompanhamento
+    index = 0 
     for a in list:
         if (a.text.strip() != ''):
-            if (index == 0): #arroz e feijao
-                dia[f'{prefix}standart'] = f'{a.text.strip()}'
+            output = f'{a.text.strip()}'
+            if (index == 0):
+                dia['standart'] = output
             elif (index == 1):
-                dia[f'{prefix}special'] = f'{a.text.strip()}'
+                dia['special'] = output
             elif (index == 2):
-                dia[f'{prefix}salad'] = f'{a.text.strip()}'
+                dia['salad'] = output
             elif (index == 3):
-                dia[f'{prefix}dessert'] = f'{a.text.strip()}'
+                dia['dessert'] = output
             elif (index == 4):
-                dia[f'{prefix}drink'] = f'{a.text.strip()}'
-            else:
-                ...
-                #EH PARA CONSIDERAR AS OBSERVACOES?
+                dia['drink'] = output
             index += 1
     aux += 1
-print(dia)
