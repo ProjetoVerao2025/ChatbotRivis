@@ -113,9 +113,10 @@ def get_week_menu(dias):
         week[f'{dia_da_semana}'] = dia
     return week
 
-diretorio_atual = os.path.dirname(os.path.abspath(__file__))
-diretorio_raiz = os.path.dirname(diretorio_atual)
-caminho_arquivo = os.path.join(diretorio_raiz, 'weekly-data.json')
+def save_weekly_data(void):
+    diretorio_atual = os.path.dirname(os.path.abspath(__file__))
+    diretorio_raiz = os.path.dirname(diretorio_atual)
+    caminho_arquivo = os.path.join(diretorio_raiz, 'weekly-data.json')
 
-with open(caminho_arquivo, 'w', encoding='utf-8') as f:
-    json.dump(get_week_menu(dias), f, indent = 4, ensure_ascii = False)
+    with open(caminho_arquivo, 'w', encoding='utf-8') as f:
+        json.dump(get_week_menu(dias), f, indent = 4, ensure_ascii = False)
