@@ -110,7 +110,7 @@ def get_week_menu(dias):
                         dic['suco'] = output
                     index += 1
             aux += 1
-        week[f'{dia_da_semana}'] = dia
+        week[f'{value}'] = dia
     return week
 
 def save_weekly_data(void):
