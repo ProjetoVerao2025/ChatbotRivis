@@ -7,3 +7,4 @@ Dockerfile
 .env
 *.json
 !requirements.txt
+config.ini

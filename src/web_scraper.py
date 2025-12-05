@@ -2,12 +2,14 @@ from bs4 import BeautifulSoup #bibioteca para filtrar o texto do site
 import requests #biblioteca para pegar o texto do site
 import json
 import os
+from config import config
+
 
 #link do site a ser utilizado
-url = 'https://sistemas.prefeitura.unicamp.br/apps/cardapio/index.php' # ...index.php?d=2025-12-01
+# ...index.php?d=2025-12-01
 
 #retrieves data from a web server.
-page = requests.get(url) 
+page = requests.get(config.url_cardapio) 
 
 #html do site "print(soup.prettify()"
 soup = BeautifulSoup(page.text, 'html.parser') 
@@ -33,7 +35,7 @@ def get_week_menu(dias):
     week = {}
     for key, value in dias.items():
         dia_da_semana = key
-        url = f'https://sistemas.prefeitura.unicamp.br/apps/cardapio/index.php{value}'
+        url = f'{config.url_cardapio}/index.php{value}'
         dia = {} 
 
         pagina_atual = requests.get(url)
@@ -116,7 +118,7 @@ def get_week_menu(dias):
 def save_weekly_data(void):
     diretorio_atual = os.path.dirname(os.path.abspath(__file__))
     diretorio_raiz = os.path.dirname(diretorio_atual)
-    caminho_arquivo = os.path.join(diretorio_raiz, 'weekly-data.json')
+    caminho_arquivo = os.path.join(diretorio_raiz, config.week_meals_file)
 
     with open(caminho_arquivo, 'w', encoding='utf-8') as f:
         json.dump(get_week_menu(dias), f, indent = 4, ensure_ascii = False)
