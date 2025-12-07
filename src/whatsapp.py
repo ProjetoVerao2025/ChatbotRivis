@@ -1,8 +1,6 @@
 # codigo para enviar a mensagem formatada (parte do arantes/vh btl)
 
-# from pywhatkit import sendwhatmsg
-# sendwhatmsg("+5535984297017", "Vai tomar no seu cu", 20, 46)
-from pywhatkit import sendwhatmsg
-sendwhatmsg("+5535984297017", "mamaki", 21, 54, 10, True)
+from pywhatkit import sendwhatmsg_to_group
+sendwhatmsg_to_group("+5535984297017", "yo", 21, 54, 10, True)
 
 
