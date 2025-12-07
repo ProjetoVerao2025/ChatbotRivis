@@ -2,3 +2,4 @@
 # vezes por dia), depois linkar ela com a classe, e mandar para o zap.
 
 from src.init import save_weekly_data, get_week_menu 
+

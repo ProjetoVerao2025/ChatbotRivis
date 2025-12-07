@@ -22,8 +22,8 @@ class Config:
 
         if "config" in config:
             c = config["config"]
-            data.url_cardapio = c.get("url_cardapio", data.url_cardapio)
-            data.week_meals_file = c.get("week_meals_file", week_meals_file)
+            self.url_cardapio = c.get("url_cardapio", self.url_cardapio)
+            self.week_meals_file = c.get("week_meals_file", self.week_meals_file)
         return
 
     def save(self):
