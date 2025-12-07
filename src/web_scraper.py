@@ -112,13 +112,16 @@ def get_week_menu(dias):
                         dic['suco'] = output
                     index += 1
             aux += 1
-        week[f'{value}'] = dia
+        week[f'{value[3:]}'] = dia
     return week
 
-def save_weekly_data(void):
+def save_weekly_data():
     diretorio_atual = os.path.dirname(os.path.abspath(__file__))
     diretorio_raiz = os.path.dirname(diretorio_atual)
     caminho_arquivo = os.path.join(diretorio_raiz, config.week_meals_file)
 
     with open(caminho_arquivo, 'w', encoding='utf-8') as f:
         json.dump(get_week_menu(dias), f, indent = 4, ensure_ascii = False)
+        
+if __name__ == "__main__":
+    save_weekly_data()
