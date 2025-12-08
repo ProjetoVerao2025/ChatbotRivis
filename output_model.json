@@ -1,0 +1,424 @@
+{
+    "2025-12-08": {
+        "almoco": {
+            "HC": {
+                "proteina": "BISTECA SUÍNA AO MOLHO VINAGRETE",
+                "carboidrato": "ARROZ E FEIJÃO",
+                "guarnicao": "ACELGA REFOGADA",
+                "salada": "SALADA DE ALFACE, CENOURA E MILHO",
+                "sobremesa": "LARANJA",
+                "suco": "REFRESCO DE ABACAXI"
+            },
+            "RS": {
+                "proteina": "BISTECA SUÍNA AO MOLHO VINAGRETE",
+                "carboidrato": "ARROZ E FEIJÃO",
+                "guarnicao": "ACELGA REFOGADA",
+                "salada": "SALADA DE ALFACE, CENOURA E MILHO",
+                "sobremesa": "LARANJA",
+                "suco": "REFRESCO DE ABACAXI"
+            },
+            "RA": {
+                "proteina": "BISTECA SUÍNA AO MOLHO VINAGRETE",
+                "carboidrato": "ARROZ E FEIJÃO",
+                "guarnicao": "ACELGA REFOGADA",
+                "salada": "SALADA DE ALFACE, CENOURA E MILHO",
+                "sobremesa": "LARANJA",
+                "suco": "REFRESCO DE ABACAXI"
+            },
+            "RU": {
+                "proteina": "BISTECA SUÍNA AO MOLHO VINAGRETE",
+                "carboidrato": "ARROZ E FEIJÃO",
+                "guarnicao": "ACELGA REFOGADA",
+                "salada": "SALADA DE ALFACE, CENOURA E MILHO",
+                "sobremesa": "LARANJA",
+                "suco": "REFRESCO DE ABACAXI"
+            }
+        }
+    },
+    "2025-12-09": {
+        "almoco": {
+            "HC": {
+                "proteina": "CUBOS BOVINO COM BATATA",
+                "carboidrato": "ARROZ E FEIJÃO",
+                "guarnicao": "VIRADO DE VAGEM",
+                "salada": "SALADA DE ESCAROLA",
+                "sobremesa": "BANANA",
+                "suco": "REFRESCO DE CAJU"
+            },
+            "RS": {
+                "proteina": "CUBOS BOVINO COM BATATA",
+                "carboidrato": "ARROZ E FEIJÃO",
+                "guarnicao": "VIRADO DE VAGEM",
+                "salada": "SALADA DE ESCAROLA",
+                "sobremesa": "BANANA",
+                "suco": "REFRESCO DE CAJU"
+            },
+            "RA": {
+                "proteina": "CUBOS BOVINO COM BATATA",
+                "carboidrato": "ARROZ E FEIJÃO",
+                "guarnicao": "VIRADO DE VAGEM",
+                "salada": "SALADA DE ESCAROLA",
+                "sobremesa": "BANANA",
+                "suco": "REFRESCO DE CAJU"
+            },
+            "RU": {
+                "proteina": "CUBOS BOVINO COM BATATA",
+                "carboidrato": "ARROZ E FEIJÃO",
+                "guarnicao": "VIRADO DE VAGEM",
+                "salada": "SALADA DE ESCAROLA",
+                "sobremesa": "BANANA",
+                "suco": "REFRESCO DE CAJU"
+            }
+        },
+        "jantar": {
+            "HC": {
+                "proteina": "BISTECA SUÍNA AO MOLHO DE LIMÃO",
+                "carboidrato": "ARROZ E FEIJÃO",
+                "guarnicao": "COUVE REFOGADA",
+                "salada": "SALADA DE BETERRABA RALADA",
+                "sobremesa": "MAÇÃ",
+                "suco": "REFRESCO DE CAJU"
+            },
+            "RS": {
+                "proteina": "BISTECA SUÍNA AO MOLHO DE LIMÃO",
+                "carboidrato": "ARROZ E FEIJÃO",
+                "guarnicao": "COUVE REFOGADA",
+                "salada": "SALADA DE BETERRABA RALADA",
+                "sobremesa": "MAÇÃ",
+                "suco": "REFRESCO DE CAJU"
+            },
+            "RA": {
+                "proteina": "BISTECA SUÍNA AO MOLHO DE LIMÃO",
+                "carboidrato": "ARROZ E FEIJÃO",
+                "guarnicao": "COUVE REFOGADA",
+                "salada": "SALADA DE BETERRABA RALADA",
+                "sobremesa": "MAÇÃ",
+                "suco": "REFRESCO DE CAJU"
+            },
+            "RU": {
+                "proteina": "BISTECA SUÍNA AO MOLHO DE LIMÃO",
+                "carboidrato": "ARROZ E FEIJÃO",
+                "guarnicao": "COUVE REFOGADA",
+                "salada": "SALADA DE BETERRABA RALADA",
+                "sobremesa": "MAÇÃ",
+                "suco": "REFRESCO DE CAJU"
+            }
+        }
+    },
+    "2025-12-10": {
+        "almoco": {
+            "HC": {
+                "proteina": "SOBRECOXA DE FRANGO ASSADA",
+                "carboidrato": "ARROZ E FEIJÃO",
+                "guarnicao": "CREME DE MILHO",
+                "salada": "SALADA DE ALFACE COM AGRIÃO",
+                "sobremesa": "MAÇÃ",
+                "suco": "REFRESCO DE ACEROLA"
+            },
+            "RS": {
+                "proteina": "SOBRECOXA DE FRANGO ASSADA",
+                "carboidrato": "ARROZ E FEIJÃO",
+                "guarnicao": "CREME DE MILHO",
+                "salada": "SALADA DE ALFACE COM AGRIÃO",
+                "sobremesa": "MAÇÃ",
+                "suco": "REFRESCO DE ACEROLA"
+            },
+            "RA": {
+                "proteina": "SOBRECOXA DE FRANGO ASSADA",
+                "carboidrato": "ARROZ E FEIJÃO",
+                "guarnicao": "CREME DE MILHO",
+                "salada": "SALADA DE ALFACE COM AGRIÃO",
+                "sobremesa": "MAÇÃ",
+                "suco": "REFRESCO DE ACEROLA"
+            },
+            "RU": {
+                "proteina": "SOBRECOXA DE FRANGO ASSADA",
+                "carboidrato": "ARROZ E FEIJÃO",
+                "guarnicao": "CREME DE MILHO",
+                "salada": "SALADA DE ALFACE COM AGRIÃO",
+                "sobremesa": "MAÇÃ",
+                "suco": "REFRESCO DE ACEROLA"
+            }
+        },
+        "jantar": {
+            "HC": {
+                "proteina": "CUBOS BOVINO COM MANDIOCA",
+                "carboidrato": "ARROZ E FEIJÃO",
+                "guarnicao": "CENOURA E VAGEM SAUTÉ",
+                "salada": "SALADA DE REPOLHO",
+                "sobremesa": "BANANA",
+                "suco": "REFRESCO DE ACEROLA"
+            },
+            "RS": {
+                "proteina": "CUBOS BOVINO COM MANDIOCA",
+                "carboidrato": "ARROZ E FEIJÃO",
+                "guarnicao": "CENOURA E VAGEM SAUTÉ",
+                "salada": "SALADA DE REPOLHO",
+                "sobremesa": "BANANA",
+                "suco": "REFRESCO DE ACEROLA"
+            },
+            "RA": {
+                "proteina": "CUBOS BOVINO COM MANDIOCA",
+                "carboidrato": "ARROZ E FEIJÃO",
+                "guarnicao": "CENOURA E VAGEM SAUTÉ",
+                "salada": "SALADA DE REPOLHO",
+                "sobremesa": "BANANA",
+                "suco": "REFRESCO DE ACEROLA"
+            },
+            "RU": {
+                "proteina": "CUBOS BOVINO COM MANDIOCA",
+                "carboidrato": "ARROZ E FEIJÃO",
+                "guarnicao": "CENOURA E VAGEM SAUTÉ",
+                "salada": "SALADA DE REPOLHO",
+                "sobremesa": "BANANA",
+                "suco": "REFRESCO DE ACEROLA"
+            }
+        }
+    },
+    "2025-12-11": {
+        "almoco": {
+            "HC": {
+                "proteina": "CARNE MOÍDA CAIPIRA (MILHO, TOMATE, BACON E EXTRATO DE TOMATE)",
+                "carboidrato": "ARROZ E FEIJÃO",
+                "guarnicao": "MACARRÃO AO ALHO E ÓLEO",
+                "salada": "SALADA DE BETERRABA RALADA",
+                "sobremesa": "BARRA DE CEREAL",
+                "suco": "REFRESCO DE UVA"
+            },
+            "RS": {
+                "proteina": "CARNE MOÍDA CAIPIRA (MILHO, TOMATE, BACON E EXTRATO DE TOMATE)",
+                "carboidrato": "ARROZ E FEIJÃO",
+                "guarnicao": "MACARRÃO AO ALHO E ÓLEO",
+                "salada": "SALADA DE BETERRABA RALADA",
+                "sobremesa": "BARRA DE CEREAL",
+                "suco": "REFRESCO DE UVA"
+            },
+            "RA": {
+                "proteina": "CARNE MOÍDA CAIPIRA (MILHO, TOMATE, BACON E EXTRATO DE TOMATE)",
+                "carboidrato": "ARROZ E FEIJÃO",
+                "guarnicao": "MACARRÃO AO ALHO E ÓLEO",
+                "salada": "SALADA DE BETERRABA RALADA",
+                "sobremesa": "BARRA DE CEREAL",
+                "suco": "REFRESCO DE UVA"
+            },
+            "RU": {
+                "proteina": "CARNE MOÍDA CAIPIRA (MILHO, TOMATE, BACON E EXTRATO DE TOMATE)",
+                "carboidrato": "ARROZ E FEIJÃO",
+                "guarnicao": "MACARRÃO AO ALHO E ÓLEO",
+                "salada": "SALADA DE BETERRABA RALADA",
+                "sobremesa": "BARRA DE CEREAL",
+                "suco": "REFRESCO DE UVA"
+            }
+        },
+        "jantar": {
+            "HC": {
+                "proteina": "SOBRECOXA DE FRANGO ASSADA",
+                "carboidrato": "ARROZ E FEIJÃO",
+                "guarnicao": "ABOBRINHA REFOGADA",
+                "salada": "SALADA DE ACELGA COM COUVE",
+                "sobremesa": "LARANJA",
+                "suco": "REFRESCO DE UVA"
+            },
+            "RS": {
+                "proteina": "SOBRECOXA DE FRANGO ASSADA",
+                "carboidrato": "ARROZ E FEIJÃO",
+                "guarnicao": "ABOBRINHA REFOGADA",
+                "salada": "SALADA DE ACELGA COM COUVE",
+                "sobremesa": "LARANJA",
+                "suco": "REFRESCO DE UVA"
+            },
+            "RA": {
+                "proteina": "SOBRECOXA DE FRANGO ASSADA",
+                "carboidrato": "ARROZ E FEIJÃO",
+                "guarnicao": "ABOBRINHA REFOGADA",
+                "salada": "SALADA DE ACELGA COM COUVE",
+                "sobremesa": "LARANJA",
+                "suco": "REFRESCO DE UVA"
+            },
+            "RU": {
+                "proteina": "SOBRECOXA DE FRANGO ASSADA",
+                "carboidrato": "ARROZ E FEIJÃO",
+                "guarnicao": "ABOBRINHA REFOGADA",
+                "salada": "SALADA DE ACELGA COM COUVE",
+                "sobremesa": "LARANJA",
+                "suco": "REFRESCO DE UVA"
+            }
+        }
+    },
+    "2025-12-12": {
+        "almoco": {
+            "HC": {
+                "proteina": "LINGUIÇA DE FRANGO ASSADA",
+                "carboidrato": "ARROZ E FEIJÃO",
+                "guarnicao": "COUVE NO ALHO",
+                "salada": "SALADA DE ALFACE",
+                "sobremesa": "TANGERINA",
+                "suco": "REFRESCO DE ABACAXI"
+            },
+            "RS": {
+                "proteina": "LINGUIÇA DE FRANGO ASSADA",
+                "carboidrato": "ARROZ E FEIJÃO",
+                "guarnicao": "COUVE NO ALHO",
+                "salada": "SALADA DE ALFACE",
+                "sobremesa": "TANGERINA",
+                "suco": "REFRESCO DE ABACAXI"
+            },
+            "RA": {
+                "proteina": "LINGUIÇA DE FRANGO ASSADA",
+                "carboidrato": "ARROZ E FEIJÃO",
+                "guarnicao": "COUVE NO ALHO",
+                "salada": "SALADA DE ALFACE",
+                "sobremesa": "TANGERINA",
+                "suco": "REFRESCO DE ABACAXI"
+            },
+            "RU": {
+                "proteina": "LINGUIÇA DE FRANGO ASSADA",
+                "carboidrato": "ARROZ E FEIJÃO",
+                "guarnicao": "COUVE NO ALHO",
+                "salada": "SALADA DE ALFACE",
+                "sobremesa": "TANGERINA",
+                "suco": "REFRESCO DE ABACAXI"
+            }
+        },
+        "jantar": {
+            "HC": {
+                "proteina": "CARNE MOÍDA AO MOLHO SUGO",
+                "carboidrato": "ARROZ E FEIJÃO",
+                "guarnicao": "PURÊ DE BATATA",
+                "salada": "SALADA DE ALMEIRÃO",
+                "sobremesa": "DOCE DE ABÓBORA",
+                "suco": "REFRESCO DE ABACAXI"
+            },
+            "RS": {
+                "proteina": "CARNE MOÍDA AO MOLHO SUGO",
+                "carboidrato": "ARROZ E FEIJÃO",
+                "guarnicao": "PURÊ DE BATATA",
+                "salada": "SALADA DE ALMEIRÃO",
+                "sobremesa": "DOCE DE ABÓBORA",
+                "suco": "REFRESCO DE ABACAXI"
+            },
+            "RA": {
+                "proteina": "CARNE MOÍDA AO MOLHO SUGO",
+                "carboidrato": "ARROZ E FEIJÃO",
+                "guarnicao": "PURÊ DE BATATA",
+                "salada": "SALADA DE ALMEIRÃO",
+                "sobremesa": "DOCE DE ABÓBORA",
+                "suco": "REFRESCO DE ABACAXI"
+            },
+            "RU": {
+                "proteina": "CARNE MOÍDA AO MOLHO SUGO",
+                "carboidrato": "ARROZ E FEIJÃO",
+                "guarnicao": "PURÊ DE BATATA",
+                "salada": "SALADA DE ALMEIRÃO",
+                "sobremesa": "DOCE DE ABÓBORA",
+                "suco": "REFRESCO DE ABACAXI"
+            }
+        }
+    },
+    "2025-12-13": {
+        "almoco": {
+            "HC": {
+                "proteina": "BIFE ACEBOLADO",
+                "carboidrato": "ARROZ E FEIJÃO",
+                "guarnicao": "FAROFA CROCANTE",
+                "salada": "SALADA DE ACELGA COM LARANJA",
+                "sobremesa": "BANANA",
+                "suco": "REFRESCO DE ACEROLA"
+            },
+            "RS": {
+                "proteina": "BIFE ACEBOLADO",
+                "carboidrato": "ARROZ E FEIJÃO",
+                "guarnicao": "FAROFA CROCANTE",
+                "salada": "SALADA DE ACELGA COM LARANJA",
+                "sobremesa": "BANANA",
+                "suco": "REFRESCO DE ACEROLA"
+            },
+            "RA": {
+                "proteina": "BIFE ACEBOLADO",
+                "carboidrato": "ARROZ E FEIJÃO",
+                "guarnicao": "FAROFA CROCANTE",
+                "salada": "SALADA DE ACELGA COM LARANJA",
+                "sobremesa": "BANANA",
+                "suco": "REFRESCO DE ACEROLA"
+            },
+            "RU": {
+                "proteina": "BIFE ACEBOLADO",
+                "carboidrato": "ARROZ E FEIJÃO",
+                "guarnicao": "FAROFA CROCANTE",
+                "salada": "SALADA DE ACELGA COM LARANJA",
+                "sobremesa": "BANANA",
+                "suco": "REFRESCO DE ACEROLA"
+            }
+        },
+        "jantar": {
+            "HC": {
+                "proteina": "LINGUIÇA DE FRANGO AO VINAGRETE",
+                "carboidrato": "ARROZ E FEIJÃO",
+                "guarnicao": "REPOLHO REFOGADO NA SALSA",
+                "salada": "SALADA DE ACELGA COM AGRIÃO",
+                "sobremesa": "LARANJA",
+                "suco": "REFRESCO DE ACEROLA"
+            },
+            "RS": {
+                "proteina": "LINGUIÇA DE FRANGO AO VINAGRETE",
+                "carboidrato": "ARROZ E FEIJÃO",
+                "guarnicao": "REPOLHO REFOGADO NA SALSA",
+                "salada": "SALADA DE ACELGA COM AGRIÃO",
+                "sobremesa": "LARANJA",
+                "suco": "REFRESCO DE ACEROLA"
+            },
+            "RA": {
+                "proteina": "LINGUIÇA DE FRANGO AO VINAGRETE",
+                "carboidrato": "ARROZ E FEIJÃO",
+                "guarnicao": "REPOLHO REFOGADO NA SALSA",
+                "salada": "SALADA DE ACELGA COM AGRIÃO",
+                "sobremesa": "LARANJA",
+                "suco": "REFRESCO DE ACEROLA"
+            },
+            "RU": {
+                "proteina": "LINGUIÇA DE FRANGO AO VINAGRETE",
+                "carboidrato": "ARROZ E FEIJÃO",
+                "guarnicao": "REPOLHO REFOGADO NA SALSA",
+                "salada": "SALADA DE ACELGA COM AGRIÃO",
+                "sobremesa": "LARANJA",
+                "suco": "REFRESCO DE ACEROLA"
+            }
+        }
+    },
+    "2025-12-14": {
+        "almoco": {
+            "HC": {
+                "proteina": "FILEZINHO DE FRANGO AO MOLHO DE ERVAS",
+                "carboidrato": "ARROZ E FEIJÃO",
+                "guarnicao": "ABÓBORA CABOTIÁ AO ALECRIM",
+                "salada": "SALADA DE REPOLHO COM RÚCULA",
+                "sobremesa": "ARROZ DOCE (LEITE, AÇÚCAR E CANELA EM PÓ)",
+                "suco": "REFRESCO DE MANGA"
+            },
+            "RS": {
+                "proteina": "FILEZINHO DE FRANGO AO MOLHO DE ERVAS",
+                "carboidrato": "ARROZ E FEIJÃO",
+                "guarnicao": "ABÓBORA CABOTIÁ AO ALECRIM",
+                "salada": "SALADA DE REPOLHO COM RÚCULA",
+                "sobremesa": "ARROZ DOCE (LEITE, AÇÚCAR E CANELA EM PÓ)",
+                "suco": "REFRESCO DE MANGA"
+            },
+            "RA": {
+                "proteina": "FILEZINHO DE FRANGO AO MOLHO DE ERVAS",
+                "carboidrato": "ARROZ E FEIJÃO",
+                "guarnicao": "ABÓBORA CABOTIÁ AO ALECRIM",
+                "salada": "SALADA DE REPOLHO COM RÚCULA",
+                "sobremesa": "ARROZ DOCE (LEITE, AÇÚCAR E CANELA EM PÓ)",
+                "suco": "REFRESCO DE MANGA"
+            },
+            "RU": {
+                "proteina": "FILEZINHO DE FRANGO AO MOLHO DE ERVAS",
+                "carboidrato": "ARROZ E FEIJÃO",
+                "guarnicao": "ABÓBORA CABOTIÁ AO ALECRIM",
+                "salada": "SALADA DE REPOLHO COM RÚCULA",
+                "sobremesa": "ARROZ DOCE (LEITE, AÇÚCAR E CANELA EM PÓ)",
+                "suco": "REFRESCO DE MANGA"
+            }
+        }
+    }
+}
