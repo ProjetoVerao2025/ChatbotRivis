@@ -57,7 +57,6 @@ for link in dias_da_semana:
 def get_week_menu(dias):
     week = {}
     for key, value in dias.items():
-        dia_da_semana = key
         url = f'{config.url_cardapio}/index.php{value}'
         dia = {} 
 
@@ -82,7 +81,7 @@ def get_week_menu(dias):
                 dia['jantar'] = dinner
                 # dinner['proteina'] = f'{p.text.strip()}'
                 for restaurante,proteina in splitter(p).items():
-                    lunch[f'{restaurante}']['proteina'] = proteina
+                    dinner[f'{restaurante}']['proteina'] = proteina
             tmp += 1
 
         #[0] = padroes ('arroz e feijao'), [1] = especial, [2] = salada, [3] = sobremesa (output especial), [4] = refresco
