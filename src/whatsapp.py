@@ -11,18 +11,23 @@ import pickle
 import time
 
 def create_msg(refeição: dict, classing: dict, msg_dict: dict, msg: str = ""):
-
-    proteina = refeição["proteina"]
-    guarnicao = refeição["guarnicao"]
-    salada = refeição["salada"]
+    """
+    refeição: dict -> Refeição do dia.
+    classing: dict -> Dicionário que classifica as refeições.
+    msg_dict: dict -> Dicionário das mensagens.
+    msg: str -> String adicionada no início de toda mensagem. 
+    """
+    proteina = refeição["proteina"]["RU"]
+    guarnicao = refeição["guarnicao"]["RU"]
+    salada = refeição["salada"]["RU"]
     sobremesa = refeição["sobremesa"]["RU"]
-    suco = refeição["suco"]
+    suco = refeição["suco"]["RU"]
 
     proteina_msg = choice(msg_dict[classing[proteina]])[:]
-    guarnicao_msg =  choice(msg_dict[classing[guarnicao]])[:]
-    salada_msg =  choice(msg_dict[classing[salada]])[:]
-    sobremesa_msg =  choice(msg_dict[classing[sobremesa]])[:]
-    suco_msg =  choice(msg_dict[classing[suco]])[:]
+    guarnicao_msg = choice(msg_dict[classing[guarnicao]])[:]
+    salada_msg = choice(msg_dict[classing[salada]])[:]
+    sobremesa_msg = choice(msg_dict[classing[sobremesa]])[:]
+    suco_msg = choice(msg_dict[classing[suco]])[:]
 
     for i in range(len(proteina_msg)):
         if proteina_msg[i] == "_":
@@ -54,6 +59,7 @@ def send_msg(msg: str):
     driver.get(f"https://web.whatsapp.com/")
     load_cookies(driver)
     driver.get(f"https://web.whatsapp.com/send?&text={quote(msg)}")
+    
     found = False
     while not found:
         try:
