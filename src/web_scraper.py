@@ -1,5 +1,5 @@
 from bs4 import BeautifulSoup #bibioteca para filtrar o texto do site
-from config import config
+from src.config import config
 import requests #biblioteca para pegar o texto do site
 import json
 import os
