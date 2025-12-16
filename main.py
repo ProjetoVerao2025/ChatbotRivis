@@ -5,8 +5,11 @@
 import schedule
 import time
 from init import save_weekly_data
+from whatsapp import send
 
-schedule.every().monday.at("10:00").do(save_weekly_data)
+schedule.every().monday.at("08:00").do(save_weekly_data)
+schedule.every().day.at("09:00").do(send)
+schedule.every().day.at("16:00").do(send)
 
 while True:
     schedule.run_pending()

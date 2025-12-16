@@ -8,9 +8,11 @@ import os
 @dataclass
 class Config:
     week_meals_file: str = 'weekly-data.json'
-    msgs: str = 'msgs.json'
+    msgs: str = 'perso_messages.json'
+    relationships: str = 'relationships.json'
     config_file: str = 'config.ini'
     url_cardapio: str = 'https://sistemas.prefeitura.unicamp.br/apps/cardapio/index.php'
+    chrome_dir: str = 'user-data-dir=C:\\Users\\Bernardo\\AppData\\Local\\Google\\Chrome\\User Data\\Default'
 
     def load(self):
         config = ConfigParser()
