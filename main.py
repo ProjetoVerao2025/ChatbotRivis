@@ -11,7 +11,8 @@ schedule.every().monday.at("08:00").do(save_weekly_data)
 schedule.every().day.at("09:00").do(send)
 schedule.every().day.at("16:00").do(send)
 
-print("Serviço do chatbot iniciado.")
+# Garantindo que temos dados para enviar
+save_weekly_data() 
 
 while True:
     schedule.run_pending()
