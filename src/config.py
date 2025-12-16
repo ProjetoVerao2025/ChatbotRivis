@@ -12,8 +12,8 @@ class Config:
     msgs: str = 'perso_messages.json'
     relationships: str = 'relationships.json'
     config_file: str = 'config.ini'
-    chrome_dir: str = 'user-data-dir=C:\\Users\\Bernardo\\AppData\\Local\\Google\\Chrome\\User Data\\Default'
-    headless: bool = False # Faz com que o chrome rode sem interface grafica. Usado para rodar no server
+    chrome_dir: str = 'chromium-chatbot'
+    headless: bool = True # Faz com que o chrome rode sem interface grafica. Usado para rodar no server
 
 
     def load(self):
