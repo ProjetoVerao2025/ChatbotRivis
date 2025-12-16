@@ -3,3 +3,8 @@ beautifulsoup4==4.12.3
 pywhatkit==5.4
 selenium==4.39.0
 schedule==1.2.2
+
+# Para o servidor exibir o QRcode no terminal
+pyzbar==0.1.9
+pillow==12.0.0
+qrcode==8.2
