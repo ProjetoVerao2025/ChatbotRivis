@@ -10,7 +10,10 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 import pickle
 import time
-from config import Config
+from config import config
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
 
 def create_msg(meal: dict, classification: dict, msg_dict: dict, msg: str = ""):
     """
@@ -58,46 +61,129 @@ def create_msg(meal: dict, classification: dict, msg_dict: dict, msg: str = ""):
     
     return msg + proteina_msg + guarnicao_msg + salada_msg + sobremesa_msg + suco_msg
 
-def send_msg(msg: str):
 
-    options = Options()
-    options.add_argument(Config.chrome_dir)
-    driver = wb.Chrome(options=options)
-    driver.get(f"https://web.whatsapp.com/")
-    load_cookies(driver)
-    driver.get(f"https://web.whatsapp.com/send?&text={quote(msg)}")
 
-    found = False
-    while not found:
+def wait_for_element(driver, xpath, retries=10, delay=2):
+    for i in range(retries):
         try:
-            box = driver.find_element(By.XPATH, '//*[@id="app"]/div/div/span[2]/div/div/div/div/div/div/div/div[2]/div/div/div/div[3]/div/div[2]/div/div[2]')
-            found = True
+            return driver.find_element(By.XPATH, xpath)
+        except:
+            time.sleep(delay)
+    raise Exception(f"Elemento não encontrado para o XPath: {xpath}")
+
+
+def select_group(driver, group_name: str):
+    wait = WebDriverWait(driver, 10)
+
+    search_box = WebDriverWait(driver, 10).until(
+        EC.element_to_be_clickable((By.XPATH, '//div[@contenteditable="true"][@data-tab="3"]')),
+        search_box.click(),
+        search_box.clear(),
+        search_box.send_keys(group_name)
+        )
+
+    group = wait.until(
+        EC.element_to_be_clickable(
+            (By.XPATH, f'//span[@title="{group_name}"]')
+        )
+    )
+    group.click()
+
+def wait_for_element(driver, locator, retries=10, delay=2):
+    """
+    Helper to wait for elements with a custom retry loop if needed, 
+    though WebDriverWait is generally preferred.
+    """
+    wait = WebDriverWait(driver, delay)
+    for i in range(retries):
+        try:
+            return wait.until(EC.presence_of_element_located(locator))
         except:
             pass
-    box.click()
+    raise Exception(f"Elemento não encontrado: {locator}")
+
+def send_msg_via_url(driver, msg: str, group_name: str):
+    wait = WebDriverWait(driver, 5)
+
+    encoded_msg = quote(msg)
+    driver.get(f"https://web.whatsapp.com/send?text={encoded_msg}")
+
+    search_box = wait.until(
+        EC.element_to_be_clickable((By.XPATH, "//div[@contenteditable='true']"))
+    )
     
-    found = False
-    while not found:
+    search_box.click()
+    search_box.clear()
+    search_box.send_keys(group_name)
+    time.sleep(1.5)
+
+    try:
+        xpath_group = f"//span[@title='{group_name}']"
+        group_item = wait.until(EC.presence_of_element_located((By.XPATH, xpath_group)))
+        
         try:
-            forward_button = driver.find_element(By.XPATH, '//*[@id="app"]/div/div/span[2]/div/div/div/div/div/div/div/span/div/div/div')
-            found = True
+            group_item.click()
+        except:
+            driver.execute_script("arguments[0].click();", group_item)
+            
+        print("Grupo selecionado.")
+    except Exception as e:
+        raise Exception(f"Não foi possível encontrar ou clicar no grupo '{group_name}'. Erro: {e}")
+
+
+    forward_btn = wait.until(EC.element_to_be_clickable((By.XPATH, '//span[@data-icon="wds-ic-send-filled"]')))
+    driver.execute_script("arguments[0].click();", forward_btn)
+    
+    time.sleep(3)
+
+    print("Entrou na tela de mensagem do grupo")
+    send_btn = wait.until(EC.element_to_be_clickable((By.XPATH, '//button[.//span[@data-icon="wds-ic-send-filled"]]')))
+    driver.execute_script("arguments[0].click();", send_btn)
+    time.sleep(10)
+    print("Mensagem enviada com sucesso.")
+
+def send_msg(msg: str):
+    options = Options()
+    options.add_argument(f"user-data-dir={config.chrome_dir}")
+    options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36")
+    options.add_argument("--headless") # Uncomment if you don't want to see the browser
+    
+    driver = wb.Chrome(options=options)
+    
+    try:
+        driver.get("https://web.whatsapp.com/")
+        load_cookies(driver)
+        driver.refresh()
+
+        # Check login status
+        wait = WebDriverWait(driver, 20)
+        try:
+            # Wait for the main side panel to ensure we are logged in
+            wait.until(EC.presence_of_element_located((By.ID, "side")))
+        except:
+            print("WhatsApp não está logado ou demorou para carregar. Verifique o QR Code.")
+            # Allow manual login time if needed
+            WebDriverWait(driver, 120).until(
+                EC.presence_of_element_located((By.ID, "side"))
+            )
+            # Save new cookies after manual login
+            pickle.dump(driver.get_cookies(), open('.cookies.pkl', 'wb'))
+
+        # Perform the sending logic
+        # We assume the group name is "TCN" based on your original code
+        # Ideally, move "TCN" to your Config file
+        send_msg_via_url(driver, msg, "TCN") 
+
+    except Exception as e:
+        print(f"Erro Fatal: {e}")
+    finally:
+        # Save cookies and close
+        try:
+            pickle.dump(driver.get_cookies(), open('.cookies.pkl', 'wb'))
         except:
             pass
-    time.sleep(2)
-    forward_button.click()
+        driver.quit()
 
-    found = False
-    while not found:
-        try:
-            send_button = driver.find_element(By.XPATH, '//*[@id="main"]/footer/div[1]/div/span/div/div/div/div[4]/div/span/button')
-            found = True
-        except:
-            pass
-    time.sleep(2)
-    send_button.click()
-
-    time.sleep(2)
-    save_and_exit(driver)
 
 def load_cookies(driver):
     try:
@@ -112,6 +198,7 @@ def save_and_exit(driver):
     driver.close()
     exit()
 
+
 def get_quality(meal: dict, classification: dict):
     quality = {
         "proteina": "neutro",
@@ -119,7 +206,7 @@ def get_quality(meal: dict, classification: dict):
         "salada": "neutro",
         "sobremesa": "neutro",
         "suco": "neutro"
-        }
+    }
     
     proteina = meal["proteina"]
     guarnicao = meal["guarnicao"]
@@ -140,14 +227,15 @@ def get_quality(meal: dict, classification: dict):
         quality["salada"] = classification["salada"][salada_simplificado]
     
     sobremesa_simplificado = simplify_sobremesa(sobremesa)
-    if sobremesa in classification["sobremesa"]:
+    if sobremesa_simplificado in classification["sobremesa"]:
         quality["sobremesa"] = classification["sobremesa"][sobremesa_simplificado]
     
-    suco_simplificado = suco
-    if suco_simplificado in classification["suco"]:
-        quality["suco"] = classification["suco"][suco_simplificado]
+    if suco in classification["suco"]:
+        quality["suco"] = classification["suco"][suco]
 
     return quality
+
+
 def simplify_proteina(item: str):
     if item.startswith("ALMONDEGA"):
         return "ALMONDEGA"
@@ -352,10 +440,10 @@ def simplify_sobremesa(item: str):
         return "BANANA"
 
 def send():
-    if datetime.now().day == "sunday"
+    #if datetime.now().day == "sunday"
     diretorio_atual = os.path.dirname(os.path.abspath(__file__))
     diretorio_raiz = os.path.dirname(diretorio_atual)
-    caminho_arquivo = os.path.join(diretorio_raiz, Config.week_meals_file)
+    caminho_arquivo = os.path.join(diretorio_raiz, config.week_meals_file)
 
     with open(caminho_arquivo, "r", encoding="utf-8") as file:
         meal = json.load(file)[str(date.today())]
@@ -366,11 +454,11 @@ def send():
             return -1
 
 
-    caminho_arquivo = os.path.join(diretorio_raiz, Config.msgs)
+    caminho_arquivo = os.path.join(diretorio_raiz, config.msgs)
     with open(caminho_arquivo, "r", encoding="utf-8") as file:
         msgs = json.load(file)
 
-    caminho_arquivo = os.path.join(diretorio_raiz, Config.relationships)
+    caminho_arquivo = os.path.join(diretorio_raiz, config.relationships)
     with open(caminho_arquivo, "r", encoding="utf-8") as file:
         classification = json.load(file)
     
