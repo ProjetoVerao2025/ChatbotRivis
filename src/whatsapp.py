@@ -19,6 +19,7 @@ import qrcode
 from io import BytesIO
 from selenium.webdriver.common.keys import Keys
 import logging
+import unicodedata
 
 logger = logging.getLogger(__name__)
 
@@ -53,8 +54,10 @@ def get_quality(meal: dict, classification: dict):
     if sobremesa_simplificado in classification["sobremesa"]:
         quality["sobremesa"] = classification["sobremesa"][sobremesa_simplificado]
 
-    if suco in classification["suco"]:
-        quality["suco"] = classification["suco"][suco]
+    suco_simplificado = unicodedata.normalize('NFKD', suco)
+    suco_simplificado = "".join([c for c in suco_simplificado if unicodedata.category(c) != 'Mn'])
+    if suco_simplificado in classification["suco"]:
+        quality["suco"] = classification["suco"][suco_simplificado]
 
     return quality
 
