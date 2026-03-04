@@ -277,7 +277,7 @@ def send_msg_via_url(driver, msg: str, group_name: str):
     logger.debug("Aguardando caixa de pesquisa do modal...")
     try:
         wait.until(EC.presence_of_element_located((By.TAG_NAME, "body")))
-        modal_search_xpath = "//div[@role='dialog']//div[@contenteditable='true']"
+        modal_search_xpath = "//div[@role='textbox']//div[@contenteditable='true']"
         search_box = wait.until(EC.element_to_be_clickable((By.XPATH, modal_search_xpath)))
         driver.execute_script("arguments[0].click();", search_box)
         search_box.clear()
@@ -289,7 +289,7 @@ def send_msg_via_url(driver, msg: str, group_name: str):
 
     logger.info(f"Mensagem a ser enviada: \n{msg}")
     try:
-        xpath_group = f"//div[@role='dialog']//span[@title='{group_name}']"
+        xpath_group = f"//div[@role='checkbox']//span[@title='{group_name}']"
         group_element = wait.until(EC.presence_of_element_located((By.XPATH, xpath_group)))
         try:
             row = group_element.find_element(By.XPATH, "./ancestor::div[@role='button'] | ./ancestor::div[@class='_21S-L']")
@@ -302,7 +302,7 @@ def send_msg_via_url(driver, msg: str, group_name: str):
     time.sleep(2)
 
     logger.debug("Clicando no botão do modal (Encaminhar)...")
-    modal_btn_xpath = '//div[@role="dialog"]//span[@data-icon="wds-ic-send-filled"]/ancestor::div[@role="button"] | //div[@role="dialog"]//span[@data-icon="send"]/ancestor::div[@role="button"]'
+    modal_btn_xpath = '//div[@role="button"]//span[@data-icon="wds-ic-send-filled"]/ancestor::div[@role="button"] | //div[@role="dialog"]//span[@data-icon="send"]/ancestor::div[@role="button"]'
     try:
         send_btn_modal = wait.until(EC.presence_of_element_located((By.XPATH, modal_btn_xpath)))
         driver.execute_script("arguments[0].click();", send_btn_modal)
